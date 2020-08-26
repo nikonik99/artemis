@@ -1,0 +1,12 @@
+{
+    "siteName": "Test",
+    "siteBase": "/",
+    "locations" : {
+        "partials" : "layout/partials",
+        "skel" : "layout/partials/skel",
+        "partialscss" : "layout/partials/stylesheets",
+        "resources" : "layout/resources",
+        "components" : "layout/resources/components",
+        "scripts" : "layout/resources/scripts"
+    }
+}
