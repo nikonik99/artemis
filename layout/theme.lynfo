@@ -1,0 +1,18 @@
+{
+    "information":{
+        "name":"Sunset (dafault)",
+        "version":"1.0",
+        "description":"Artemis default theme",
+        "tags":"Default, Ecommerce",
+        "author":"Artemis",
+        "website":"http://www.artemis.com",
+        "contact":"sales@artemis.com",
+        "license":"http://www.artemis.com/themes/sunset/license/"
+    },
+    "requirements":{
+        "artemis":"1.0",
+        "layout":"1.0"
+    },
+    "components":{},
+    "plugins":{}
+}
