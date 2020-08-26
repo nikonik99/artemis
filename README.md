@@ -25,3 +25,57 @@
 
 ### Backend:
 * 
+
+## INFO
+### Struttura gestione temi
+#### FILE:
+* *.lyc Componente del layout
+* *.lyt Template del layout
+* *.lynfo Manifest del layout
+
+La gestione temi è stata strutturata in questo modo:
+Tutto dipende dal controller del layout, situato nella cartella omonima, che legge i dettagli del tema nel file _ theme.lynfo _ che funge da manifest.
+#### _ partials _ : contiene i layout parziali dei singoli componenti del template layout grafico
+* _ components _ che va a raccogliere i vari componenti comuni al template (meta)
+* _ skel _ contiene lo scheletro vero e proprio delle varie pagine
+* _ stylesheets _ contiene gli stylesheets di personalizzazione non generali del sito, bensì della singola pagina
+#### _ resources _ : contiene le risorse principali del template
+* _ components _ contiene componenti funzionali alle risorse (include di font e scripts) salvati sul file _ include.lyc _
+* _ images _ immagini che riguardano la struttura di base del template, ad esempio uno sfondo dell'header o lo sfondo del sito (no loghi, no altra roba)
+* _ scripts_ script funzionali al funzionamento di base del template. (JS, jQuery, ecc.)
+
+```
+layout
+|  theme.lynfo
+├ partials
+│    ├ components
+│    │   └ meta.lyc
+│    │
+│    ├ skel
+│    │   ├ account.lyt
+│    │   ├ cart.lyt
+│    │   ├ footer.lyt
+│    │   ├ header.lyt
+│    │   ├ index.lyt
+│    │   ├ menu.lyt
+│    │   └ page.lyt
+│    │
+│    └ stylesheets
+│        ├ reset.css
+│        ├ account.css
+│        ├ cart.css
+│        ├ footer.css
+│        ├ header.css
+│        ├ index.css
+│        ├ menu.css
+│        └ page.css
+└ resources
+     ├ components
+     │   └ include.lyc
+     ├ images
+     │   └ [...]
+     └scripts
+         └ [...]
+            
+```
+    
