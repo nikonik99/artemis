@@ -55,4 +55,12 @@
             //writelog
         }
     }
+
+    function cssGlobal($globalCSSFile){
+        try{
+            echo file_get_contents($globalCSSFile);
+        } catch (Exception $e){
+            //writelog
+        }
+    }
 ?>
