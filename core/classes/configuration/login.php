@@ -12,7 +12,7 @@
     @param pwd  in sha256
     @return indicazione se l'utente esiste
     */
-    public function login($email,$pwd){
+    function login($email,$pwd){
         $codePwd = sha256($pwd);
         if( mb_strlen($email, 'utf8') >= 70)//se la mail è >di 70 caratteri tronca il login
             return false;
