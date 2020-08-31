@@ -14,9 +14,11 @@
     */
     function login($email,$pwd){
         $codePwd = sha256($pwd);
-        if( mb_strlen($email, 'utf8') >= 70)//se la mail è >di 70 caratteri tronca il login
+        
+        //se la mail è >di 70 caratteri tronca il login
+        if( mb_strlen($email, 'utf8') >= 70){
             return false;
-
+        }
         $stmt= $db->prepare("SELECT nome,cognome,ruolo FROM users WHERE email=? AND password=?");
         $stmt->bind_param('ss',$email,$codePwd);//bind dei parametri
         $stmt->execute();
